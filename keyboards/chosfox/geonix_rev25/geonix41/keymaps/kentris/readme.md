@@ -4,6 +4,18 @@ This keymap ports the Kentris Planck layout used on the Thock.co Conundrum to
 the split-1U Geonix Rev.2.5 (`geonix41`). It preserves the Default, Lower, and
 Raise layouts, the 140 ms mod-tap timing, and the Raise-layer Alt-Tab behavior.
 
+The Planck ZMK mod-tap behavior is reproduced with these QMK settings:
+
+| Planck ZMK behavior | Geonix QMK equivalent |
+| --- | --- |
+| `tapping-term-ms = <140>` | `TAPPING_TERM 140` |
+| `flavor = "hold-preferred"` | `HOLD_ON_OTHER_KEY_PRESS` |
+| Quick Tap not enabled | `QUICK_TAP_TERM 0` |
+
+These settings apply to the four outer Control/Shift mod-tap keys. The
+Corne-ish Zen's home-row-mod-specific 200 ms balanced behavior and 150 ms
+prior-idle filter are intentionally not applied to this Planck layout.
+
 The Geonix firmware reserves layers 0 and 1 for its persisted Mac/Windows mode,
 so both contain the same Kentris base layout. Lower and Raise use layers 2 and
 3. Holding Lower and either Raise activates layer 4, following the Corne-ish Zen
